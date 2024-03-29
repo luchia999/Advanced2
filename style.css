@@ -66,6 +66,28 @@ h3 {
     }
 }
 
+
+@media (max-width:380px) {
+    :root {
+        --body-bd: #eeeef8;
+        --body-color: #121213;
+        --gap: 20px;
+        --post-padding: .5rem 2rem;
+        --post-margin:.5rem auto 1rem;
+        --heading-font-size: 20rem;
+        }
+        
+   .box {
+       display: grid;
+       justify-items: end;
+       grid-template-columns: repeat(2, 240px);
+       grid-template-rows: repeat(3, 1fr);
+       gap: 40px 50px;
+       padding:var(--post-padding);
+       margin:var(--post-margin);
+    }
+}
+
 .box__item-img {
     display: flex;
     width: 260px;
@@ -73,8 +95,7 @@ h3 {
     border-top: 10px solid #0f0f0e;
     border-left: 10px solid #0f0f0e;
     border-right: 10px solid #0f0f0e;
-    border-bottom: 40px  solid #0f0f0e;
-    
+    border-bottom: 40px  solid #0f0f0e;   
 }
    
 .box__item-place {
@@ -83,47 +104,30 @@ h3 {
     font-size: 14px;
 }
 
-  
-@media all and (max-width: 624px){
-    * {
-        background-color:#0e0e0f;
-        color: #dfdfe9;
-    }
-
+@media (prefers-color-scheme: dark){
+    .body {
+        background-color: var(--body-bg);
+        color:var(--body-color);
+    }  
     .box__item-img {
-        border-top: 10px solid #f9f9f1;
-        border-left: 10px solid #f7f7f2;
-        border-right: 10px solid #f9f9f6;
-        border-bottom: 40px  solid #f9f9f5;
-     }
-     
+        border-top: 10px solid #f8f8f4;
+        border-left: 10px solid #f8f8f4;
+        border-right: 10px solid #f8f8f4;
+        border-bottom: 40px  solid #f8f8f4;   
+    }  
 }
 
-@media all and (min-width: 768px){
-    * {
-        background-color:#f2f2f4;
-        color: #0f0f10;
-    }
-
+@media (prefers-color-scheme: light){
+    .body {
+        background-color: var(--body-color);
+        color:var(--body-bg);
+    } 
     .box__item-img {
-        border-top: 10px solid #040404;
+        border-top: 10px solid #0f0f0e;
         border-left: 10px solid #0f0f0e;
         border-right: 10px solid #0f0f0e;
-        border-bottom: 40px  solid #0f0f0e;
-     }       
-}
-
-@media all and (max-width: 912px){
-    * {
-        background-color:#0b0b0b;
-        color: #fbfbff;
+        border-bottom: 40px  solid #0f0f0e;   
     }
-
-    .box__item-img {
-        border-top: 10px solid #fefefb;
-        border-left: 10px solid #fefefa;
-        border-right: 10px solid #fffffc;
-        border-bottom: 40px  solid #fbfbf7;
-     }
-       
 }
+
+
